@@ -1,0 +1,26 @@
+.card{
+    margin-top: 40%;
+    display: 'flex';
+    align-items: 'center';
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form{
+    width:100%;
+    margin-top: 5%;
+}
+
+.avatar{
+    align-items: center;
+}
+
+.googleButton{
+    width: 100%;
+    align-items: center !important;
+    background-color: rgb(196, 97, 97) !important;
+    color: white;
+    font-weight: bold !important;
+    margin-top :15px;
+}
+

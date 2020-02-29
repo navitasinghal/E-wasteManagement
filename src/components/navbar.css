@@ -1,0 +1,10 @@
+.appBar{
+    padding-top: 15px;
+}
+
+.icon{
+    display: flex !important;
+    direction: rtl !important;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
