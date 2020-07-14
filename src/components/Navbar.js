@@ -34,6 +34,7 @@ import Contact from "./Contact";
 import Profile from "./Profile";
 import QRCode from "./QRCode";
 import EwasteItem from "./EwasteItem";
+import Insight from "./Insight";
 
 const drawerWidth = 240;
 
@@ -137,37 +138,36 @@ export default function PersistentDrawerLeft() {
             <Typography variant="h6" noWrap>
               E-Waste Management Application
             </Typography>
-          
 
-          <IconButton
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleMenu}
-            color="inherit"
-            style = {{float:"right !important"}}
-            direction="rtl"
-          >
-            Language
-          </IconButton>
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "right"
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "right"
-            }}
-            open={ope}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={handleClose}>English</MenuItem>
-            <MenuItem onClick={handleClose}>Hindi</MenuItem>
-          </Menu>
+            <IconButton
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleMenu}
+              color="inherit"
+              style={{ float: "right !important" }}
+              direction="rtl"
+            >
+              Language
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right"
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right"
+              }}
+              open={ope}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose}>English</MenuItem>
+              <MenuItem onClick={handleClose}>Hindi</MenuItem>
+            </Menu>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -226,6 +226,12 @@ export default function PersistentDrawerLeft() {
               </ListItemIcon>
               <ListItemText primary="About Us" />
             </ListItem>
+            <ListItem button component={Link} to="/insight">
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <ListItemText primary="Insight" />
+            </ListItem>
             <ListItem button component={Link} to="/contact">
               <ListItemIcon>
                 <MailIcon />
@@ -264,6 +270,9 @@ export default function PersistentDrawerLeft() {
             </Route>
             <Route path="/e-waste">
               <EwasteItem />
+            </Route>
+            <Route path="/insight">
+              <Insight />
             </Route>
             <Route path="*">
               <Home />

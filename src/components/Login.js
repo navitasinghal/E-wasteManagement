@@ -23,7 +23,7 @@ import "./login.css";
 import Navbar from "./Navbar";
 
 function Login() {
-  const [redirect, setRedirect] = useState(true);
+  const [redirect, setRedirect] = useState(false);
   const [response, setResponse] = useState();
   const LOGIN_URL = "";
 
